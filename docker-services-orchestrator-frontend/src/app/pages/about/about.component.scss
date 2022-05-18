@@ -1,0 +1,24 @@
+.content{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    
+
+}
+
+mat-card{
+    width: 350px;
+    height: 400px;
+    max-width: 400px;
+    max-height: 400px;
+    margin-right: 15px;
+    margin-bottom: 15px;
+    margin-top: 50px;
+}
+
+img{
+    height: 350px;
+}
+
