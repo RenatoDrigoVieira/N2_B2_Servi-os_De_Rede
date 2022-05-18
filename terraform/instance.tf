@@ -72,6 +72,7 @@ resource "aws_instance" "containers_cheguei_instance" {
   provisioner "remote-exec" {
     inline = [
       "sudo yum update -y",
+      "sudo yum install git -y",
       # install nginx
       "sudo amazon-linux-extras install nginx1 -y",
       # install docker
@@ -86,6 +87,9 @@ resource "aws_instance" "containers_cheguei_instance" {
       "sudo rm -rf /etc/nginx/nginx.conf",
       "sudo cp /tmp/nginx.conf /etc/nginx/.",
       "sudo service nginx restart",
+      # download repository
+      "git clone https://github.com/RenatoDrigoVieira/N2_B2_Servicos_De_Rede.git",
+      "sudo mv N2_B2_Servicos_De_Rede/docker-services-orchestrator-frontend/dist/docker-services-orchestrator-frontend/* /usr/share/nginx/html/",
       # run docker
       "sudo cp /tmp/daemon.json /etc/docker/.",
       "sudo rm -rf /lib/systemd/system/docker.service",
