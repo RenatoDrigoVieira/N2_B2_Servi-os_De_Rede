@@ -1,8 +1,11 @@
 <div class="container">
   <mat-toolbar color="primary"
-    ><div class="buttons">
-      <button mat-button>Home</button>
-      <button mat-button>Sobre</button>
+    ><button *ngIf="showMenuToggle" mat-icon-button (click)="toggleMenu()">
+      <mat-icon>menu</mat-icon>
+    </button>
+    <div class="buttons">
+      <button mat-button (click)="navigate('home')">Home</button>
+      <button mat-button (click)="navigate('about')">Sobre</button>
     </div>
   </mat-toolbar>
 

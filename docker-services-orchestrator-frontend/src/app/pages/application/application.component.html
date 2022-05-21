@@ -1,0 +1,23 @@
+<mat-drawer-container
+  (scroll)="onSideNavScroll($event)"
+  class="example-container"
+  [hasBackdrop]="false"
+>
+  <mat-drawer #drawer mode="side"
+    ><div class="menu">
+      <div (click)="navigate('dashboard')" class="menu-item">
+        <span>Dashboard</span>
+      </div>
+      <div (click)="navigate('containers')" class="menu-item">
+        <span>Containers</span>
+      </div>
+      <mat-divider></mat-divider>
+      <div (click)="navigate('images')" class="menu-item">
+        <span>Imagens</span>
+      </div>
+    </div></mat-drawer
+  >
+  <mat-drawer-content>
+    <router-outlet></router-outlet>
+  </mat-drawer-content>
+</mat-drawer-container>

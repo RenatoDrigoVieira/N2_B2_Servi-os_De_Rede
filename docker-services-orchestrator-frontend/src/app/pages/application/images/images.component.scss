@@ -1,0 +1,45 @@
+.create-image{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+    
+    button{
+        margin-left: 20px;
+    }
+}
+.list-images{
+    width: 100%;
+    margin-top: 40px;
+    display: column;
+    align-items: center;
+    justify-content: center;
+
+    .remove-all{
+        width: 98%;
+        display: flex;
+        align-items: flex-end;
+        justify-content: flex-end;
+    }
+}
+table{
+    width: 98%;
+    margin-top:10px
+}
+mat-accordion{
+    width: 90%;
+}
+mat-expansion-panel{
+    width: 100%; 
+}
+mat-form-field{
+    width: 90%;
+}
+
+
+.mat-column-name {
+    
+    width: 70% !important;
+}
+
