@@ -50,6 +50,12 @@ resource "aws_instance" "containers_cheguei_instance" {
     destination = "/tmp/prometheus.yml"
   }
 
+  # Copy the prometheus file to instance
+  provisioner "file" {
+    source      = "./config/grafana.ini"
+    destination = "/tmp/grafana.ini"
+  }
+
   # Copy the docker daemon json to instance
   provisioner "file" {
     source      = "./config/daemon.json"
@@ -106,11 +112,13 @@ resource "aws_instance" "containers_cheguei_instance" {
       "nohup ./node_exporter >> ./node_exporter.log &",
       # run prometheus and grafana through docker
       "sudo mkdir /prometheus-data",
+      "sudo mkdir /grafana-data",
       "sudo cp /tmp/prometheus.yml /prometheus-data/.",
+      "sudo cp /tmp/grafana.ini /grafana-data/.",
       "sudo sed -i 's;<access_key>;${aws_iam_access_key.prometheus_access_key.id};g' /prometheus-data/prometheus.yml",
       "sudo sed -i 's;<secret_key>;${aws_iam_access_key.prometheus_access_key.secret};g' /prometheus-data/prometheus.yml",
       "sudo docker run -d --name=prometheus --net=host -v /prometheus-data/prometheus.yml:/etc/prometheus/prometheus.yml prom/prometheus",
-      "sudo docker run -d --net=host --name=grafana grafana/grafana"
+      "sudo docker run -d --net=host --name=grafana -v /grafana-data/grafana.ini:/etc/grafana/grafana.ini grafana/grafana"
     ]
   }
 }

@@ -27,7 +27,7 @@
   "gnetId": 1860,
   "graphTooltip": 0,
   "id": 1,
-  "iteration": 1652912778349,
+  "iteration": 1653154854367,
   "links": [
     {
       "icon": "external link",
@@ -49,7 +49,7 @@
     {
       "datasource": {
         "type": "prometheus",
-        "uid": "${DS_PROMETHEUS}"
+        "uid": "r4WPbEu7z"
       },
       "description": "",
       "fieldConfig": {
@@ -69,8 +69,7 @@
             "mode": "absolute",
             "steps": [
               {
-                "color": "rgba(245, 54, 54, 0.9)",
-                "value": null
+                "color": "rgba(245, 54, 54, 0.9)"
               },
               {
                 "color": "rgba(237, 129, 40, 0.89)",
@@ -88,7 +87,7 @@
       },
       "gridPos": {
         "h": 2,
-        "w": 2,
+        "w": 3,
         "x": 0,
         "y": 0
       },
@@ -109,12 +108,12 @@
         },
         "textMode": "value"
       },
-      "pluginVersion": "8.5.2",
+      "pluginVersion": "8.5.3",
       "targets": [
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "iCNY5ounz"
+            "uid": "r4WPbEu7z"
           },
           "expr": "count(node_cpu_seconds_total{instance=~\"$node\", mode='system'})",
           "format": "time_series",
@@ -132,7 +131,7 @@
     {
       "datasource": {
         "type": "prometheus",
-        "uid": "${DS_PROMETHEUS}"
+        "uid": "r4WPbEu7z"
       },
       "description": "Busy state of all CPU cores together",
       "fieldConfig": {
@@ -157,8 +156,7 @@
             "mode": "absolute",
             "steps": [
               {
-                "color": "rgba(50, 172, 45, 0.97)",
-                "value": null
+                "color": "rgba(50, 172, 45, 0.97)"
               },
               {
                 "color": "rgba(237, 129, 40, 0.89)",
@@ -177,7 +175,7 @@
       "gridPos": {
         "h": 6,
         "w": 5,
-        "x": 2,
+        "x": 3,
         "y": 0
       },
       "id": 20,
@@ -194,12 +192,12 @@
         "showThresholdLabels": false,
         "showThresholdMarkers": true
       },
-      "pluginVersion": "8.5.2",
+      "pluginVersion": "8.5.3",
       "targets": [
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "iCNY5ounz"
+            "uid": "r4WPbEu7z"
           },
           "editorMode": "code",
           "exemplar": false,
@@ -222,7 +220,7 @@
     {
       "datasource": {
         "type": "prometheus",
-        "uid": "${DS_PROMETHEUS}"
+        "uid": "r4WPbEu7z"
       },
       "description": "Non available RAM memory",
       "fieldConfig": {
@@ -238,8 +236,7 @@
             "mode": "absolute",
             "steps": [
               {
-                "color": "rgba(50, 172, 45, 0.97)",
-                "value": null
+                "color": "rgba(50, 172, 45, 0.97)"
               },
               {
                 "color": "rgba(237, 129, 40, 0.89)",
@@ -258,7 +255,7 @@
       "gridPos": {
         "h": 6,
         "w": 5,
-        "x": 7,
+        "x": 8,
         "y": 0
       },
       "hideTimeOverride": false,
@@ -276,12 +273,12 @@
         "showThresholdLabels": false,
         "showThresholdMarkers": true
       },
-      "pluginVersion": "8.5.2",
+      "pluginVersion": "8.5.3",
       "targets": [
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "iCNY5ounz"
+            "uid": "r4WPbEu7z"
           },
           "expr": "((node_memory_MemTotal_bytes{instance=\"$node\",job=\"$job\"} - node_memory_MemFree_bytes{instance=\"$node\",job=\"$job\"}) / (node_memory_MemTotal_bytes{instance=\"$node\",job=\"$job\"} )) * 100",
           "format": "time_series",
@@ -293,7 +290,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "iCNY5ounz"
+            "uid": "r4WPbEu7z"
           },
           "expr": "100 - ((node_memory_MemAvailable_bytes{instance=\"$node\",job=\"$job\"} * 100) / node_memory_MemTotal_bytes{instance=\"$node\",job=\"$job\"})",
           "format": "time_series",
@@ -309,7 +306,7 @@
     {
       "datasource": {
         "type": "prometheus",
-        "uid": "iCNY5ounz"
+        "uid": "r4WPbEu7z"
       },
       "description": "Used Root FS",
       "fieldConfig": {
@@ -334,8 +331,7 @@
             "mode": "absolute",
             "steps": [
               {
-                "color": "rgba(50, 172, 45, 0.97)",
-                "value": null
+                "color": "rgba(50, 172, 45, 0.97)"
               },
               {
                 "color": "rgba(237, 129, 40, 0.89)",
@@ -354,7 +350,7 @@
       "gridPos": {
         "h": 6,
         "w": 5,
-        "x": 12,
+        "x": 13,
         "y": 0
       },
       "id": 154,
@@ -371,12 +367,12 @@
         "showThresholdLabels": false,
         "showThresholdMarkers": true
       },
-      "pluginVersion": "8.5.2",
+      "pluginVersion": "8.5.3",
       "targets": [
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "iCNY5ounz"
+            "uid": "r4WPbEu7z"
           },
           "expr": "100 - ((node_filesystem_avail_bytes{instance=\"$node\",job=\"$job\",mountpoint=\"/\",fstype!=\"rootfs\"} * 100) / node_filesystem_size_bytes{instance=\"$node\",job=\"$job\",mountpoint=\"/\",fstype!=\"rootfs\"})",
           "format": "time_series",
@@ -391,7 +387,7 @@
     {
       "datasource": {
         "type": "prometheus",
-        "uid": "${DS_PROMETHEUS}"
+        "uid": "r4WPbEu7z"
       },
       "description": "",
       "fieldConfig": {
@@ -412,8 +408,7 @@
             "mode": "absolute",
             "steps": [
               {
-                "color": "rgba(245, 54, 54, 0.9)",
-                "value": null
+                "color": "rgba(245, 54, 54, 0.9)"
               },
               {
                 "color": "rgba(237, 129, 40, 0.89)",
@@ -431,7 +426,7 @@
       },
       "gridPos": {
         "h": 2,
-        "w": 2,
+        "w": 3,
         "x": 0,
         "y": 2
       },
@@ -452,12 +447,12 @@
         },
         "textMode": "auto"
       },
-      "pluginVersion": "8.5.2",
+      "pluginVersion": "8.5.3",
       "targets": [
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "iCNY5ounz"
+            "uid": "r4WPbEu7z"
           },
           "expr": "sum(node_memory_MemTotal_bytes{instance=~\"$node\"})",
           "format": "time_series",
@@ -475,7 +470,7 @@
     {
       "datasource": {
         "type": "prometheus",
-        "uid": "${DS_PROMETHEUS}"
+        "uid": "r4WPbEu7z"
       },
       "description": "",
       "fieldConfig": {
@@ -496,8 +491,7 @@
             "mode": "absolute",
             "steps": [
               {
-                "color": "rgba(245, 54, 54, 0.9)",
-                "value": null
+                "color": "rgba(245, 54, 54, 0.9)"
               },
               {
                 "color": "rgba(237, 129, 40, 0.89)",
@@ -515,7 +509,7 @@
       },
       "gridPos": {
         "h": 2,
-        "w": 2,
+        "w": 3,
         "x": 0,
         "y": 4
       },
@@ -536,12 +530,12 @@
         },
         "textMode": "auto"
       },
-      "pluginVersion": "8.5.2",
+      "pluginVersion": "8.5.3",
       "targets": [
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "iCNY5ounz"
+            "uid": "r4WPbEu7z"
           },
           "expr": "node_filesystem_size_bytes{instance=~'$node',fstype=~\"ext.*|xfs\",mountpoint !~\".*pod.*\"}-0",
           "format": "time_series",
@@ -559,7 +553,7 @@
     {
       "datasource": {
         "type": "prometheus",
-        "uid": "${DS_PROMETHEUS}"
+        "uid": "r4WPbEu7z"
       },
       "description": "",
       "fieldConfig": {
@@ -580,8 +574,7 @@
             "mode": "absolute",
             "steps": [
               {
-                "color": "rgba(245, 54, 54, 0.9)",
-                "value": null
+                "color": "rgba(245, 54, 54, 0.9)"
               },
               {
                 "color": "rgba(237, 129, 40, 0.89)",
@@ -599,7 +592,7 @@
       },
       "gridPos": {
         "h": 5,
-        "w": 7,
+        "w": 8,
         "x": 0,
         "y": 6
       },
@@ -621,12 +614,12 @@
         },
         "textMode": "auto"
       },
-      "pluginVersion": "8.5.2",
+      "pluginVersion": "8.5.3",
       "targets": [
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "iCNY5ounz"
+            "uid": "r4WPbEu7z"
           },
           "expr": "avg(time() - node_boot_time_seconds{instance=~\"$node\"})",
           "format": "time_series",
@@ -645,7 +638,7 @@
     {
       "datasource": {
         "type": "prometheus",
-        "uid": "${DS_PROMETHEUS}"
+        "uid": "r4WPbEu7z"
       },
       "description": "",
       "fieldConfig": {
@@ -666,8 +659,7 @@
             "mode": "absolute",
             "steps": [
               {
-                "color": "dark-green",
-                "value": null
+                "color": "dark-green"
               }
             ]
           },
@@ -678,7 +670,7 @@
       "gridPos": {
         "h": 5,
         "w": 10,
-        "x": 7,
+        "x": 8,
         "y": 6
       },
       "id": 163,
@@ -698,12 +690,12 @@
         },
         "textMode": "auto"
       },
-      "pluginVersion": "8.5.2",
+      "pluginVersion": "8.5.3",
       "targets": [
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "iCNY5ounz"
+            "uid": "r4WPbEu7z"
           },
           "expr": "engine_daemon_container_states_containers{state=\"running\"} - 2",
           "format": "time_series",
@@ -737,7 +729,7 @@
         "includeAll": false,
         "label": "datasource",
         "multi": false,
-        "name": "DS_PROMETHEUS",
+        "name": "Prometheus",
         "options": [],
         "query": "prometheus",
         "refresh": 1,
@@ -753,12 +745,9 @@
         },
         "datasource": {
           "type": "prometheus",
-          "uid": "td5DC5Xnz"
+          "uid": "r4WPbEu7z"
         },
         "definition": "",
-        "error": {
-          "message": "Datasource td5DC5Xnz was not found"
-        },
         "hide": 0,
         "includeAll": false,
         "label": "Job",
@@ -786,12 +775,9 @@
         },
         "datasource": {
           "type": "prometheus",
-          "uid": "td5DC5Xnz"
+          "uid": "r4WPbEu7z"
         },
         "definition": "label_values(node_uname_info{job=\"$job\"}, instance)",
-        "error": {
-          "message": "Datasource td5DC5Xnz was not found"
-        },
         "hide": 0,
         "includeAll": false,
         "label": "Host:",
@@ -866,6 +852,6 @@
   "timezone": "browser",
   "title": "Containers Cheguei",
   "uid": "rYdddlPWk",
-  "version": 4,
+  "version": 9,
   "weekStart": ""
 }

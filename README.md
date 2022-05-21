@@ -4,12 +4,20 @@ Docker Services Orchestrator
 ## Interface :earth_americas:
 
 - **https://containers.cheguei.app/**
+
+
+<p align="center">
+  <a href="./docs/login.png">
+    <img alt="Made by Christian Seki" src="./docs/login.png" width="450px">
+  </a>
+</p>
+
 ## Infraestrutura em Cloud :scroll:
 
 ### Arquitetura
 
 <p align="center">
-  <a href="./architecture.png">
-    <img alt="Made by Christian Seki" src="./architecture.png" width="250px">
+  <a href="./docs/architecture.png">
+    <img alt="Made by Christian Seki" src="./docs/architecture.png" width="450px">
   </a>
 </p>
