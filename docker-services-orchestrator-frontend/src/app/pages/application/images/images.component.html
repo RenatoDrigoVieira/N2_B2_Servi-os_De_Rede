@@ -2,14 +2,16 @@
   <mat-accordion>
     <mat-expansion-panel>
       <mat-expansion-panel-header>
-        <mat-panel-title> Criar nova imagem </mat-panel-title>
+        <mat-panel-title> Carregar nova imagem </mat-panel-title>
       </mat-expansion-panel-header>
       <form [formGroup]="imageForm" (ngSubmit)="createImage()">
         <mat-form-field>
           <mat-label>Nome da imagem</mat-label>
           <input matInput formControlName="name" />
         </mat-form-field>
-        <button mat-raised-button color="primary" type="submit">Criar</button>
+        <button mat-raised-button color="primary" type="submit">
+          Carregar
+        </button>
       </form>
     </mat-expansion-panel>
   </mat-accordion>
