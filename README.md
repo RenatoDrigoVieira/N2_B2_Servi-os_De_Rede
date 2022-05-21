@@ -13,4 +13,3 @@ Docker Services Orchestrator
     <img alt="Made by Christian Seki" src="./architecture.png" width="250px">
   </a>
 </p>
-
