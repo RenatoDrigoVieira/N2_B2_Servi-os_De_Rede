@@ -21,6 +21,14 @@ export class ContainersController {
       loadContainerDto.image,
     );
   }
+  @Post('/start/:id')
+  startContainer(@Param('id') id: string) {
+    return this.containersService.startContainer(id);
+  }
+  @Post('/stop/:id')
+  stopContainer(@Param('id') id: string) {
+    return this.containersService.stopContainer(id);
+  }
 
   @Get()
   getAllContainer() {

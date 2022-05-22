@@ -10,10 +10,13 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatTableModule } from '@angular/material/table';
 import { MatIconModule } from '@angular/material/icon';
 import { MatDialogModule } from '@angular/material/dialog';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+import { CommonModule } from '@angular/common';
 
 @NgModule({
   declarations: [ImagesComponent],
   imports: [
+    CommonModule,
     ImagesRoutes,
     MatExpansionModule,
     MatInputModule,
@@ -23,6 +26,7 @@ import { MatDialogModule } from '@angular/material/dialog';
     MatTableModule,
     MatIconModule,
     MatDialogModule,
+    MatProgressSpinnerModule,
   ],
 })
 export class ImagesModule {}

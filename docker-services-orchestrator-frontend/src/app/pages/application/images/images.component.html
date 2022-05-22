@@ -1,3 +1,6 @@
+<div class="title">
+  <span>Imagens</span>
+</div>
 <div class="create-image">
   <mat-accordion>
     <mat-expansion-panel>
@@ -9,9 +12,20 @@
           <mat-label>Nome da imagem</mat-label>
           <input matInput formControlName="name" />
         </mat-form-field>
-        <button mat-raised-button color="primary" type="submit">
+        <mat-form-field>
+          <mat-label>Tag</mat-label>
+          <input matInput formControlName="tag" />
+        </mat-form-field>
+        <button
+          *ngIf="!uploadingImage"
+          [disabled]="imageForm.invalid"
+          mat-raised-button
+          color="primary"
+          type="submit"
+        >
           Carregar
         </button>
+        <mat-spinner [diameter]="35" *ngIf="uploadingImage"></mat-spinner>
       </form>
     </mat-expansion-panel>
   </mat-accordion>

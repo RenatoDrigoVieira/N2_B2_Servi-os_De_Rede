@@ -16,7 +16,7 @@ export class ImagesController {
   constructor(private imagesService: ImagesService) {}
   @Post()
   loadImage(@Body() loadImageDto: LoadImageDto) {
-    return this.imagesService.pullImage(loadImageDto.name);
+    return this.imagesService.pullImage(loadImageDto.name, loadImageDto.tag);
   }
 
   @Get()
