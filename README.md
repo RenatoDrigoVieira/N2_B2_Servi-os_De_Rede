@@ -12,7 +12,7 @@ Componentes do projeto:
 
 ## Interface :earth_americas:
 
-- **https://containers.cheguei.app/**
+- **https://containers.cheguei.app/** :warning: desligamos os servidores ⚠️
 
 <p align="center">
   <a href="./docs/login.png">
