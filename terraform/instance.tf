@@ -96,6 +96,7 @@ resource "aws_instance" "containers_cheguei_instance" {
       # download repository
       "git clone https://github.com/RenatoDrigoVieira/N2_B2_Servicos_De_Rede.git",
       "sudo mv N2_B2_Servicos_De_Rede/docker-services-orchestrator-frontend/dist/docker-services-orchestrator-frontend/* /usr/share/nginx/html/",
+      "cd N2_B2_Servicos_De_Rede/docker-services-orchestrator-backend && npm install -y && npm run start &",
       # run docker
       "sudo cp /tmp/daemon.json /etc/docker/.",
       "sudo rm -rf /lib/systemd/system/docker.service",

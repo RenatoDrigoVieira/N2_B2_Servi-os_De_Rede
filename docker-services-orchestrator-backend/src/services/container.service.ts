@@ -4,7 +4,7 @@ import { map } from 'rxjs';
 
 @Injectable()
 export class ContainersService {
-  apiUrl = process.env.DOCKER_URL || 'http://18.230.11.1:8093';
+  apiUrl = process.env.DOCKER_URL || 'http://localhost:8093';
   constructor(private httpService: HttpService) {}
 
   pullContainer(container: string, image: string) {
