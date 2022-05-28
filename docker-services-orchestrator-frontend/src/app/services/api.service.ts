@@ -5,7 +5,7 @@ import { Injectable } from '@angular/core';
   providedIn: 'root',
 })
 export class ApiService {
-  baseUrl = 'http://localhost:8080/';
+  baseUrl = 'https://containers.cheguei.app/api/'
 
   constructor(private http: HttpClient) {}
 
